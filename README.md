@@ -34,9 +34,12 @@ This SMS Bridge enables **satellite-based SMS access to Grok AI** for users with
 
 ### 1. Environment Variables
 
-Copy `.env` and fill in your credentials:
+Copy the template to `.env` and fill in your credentials:
 
 ```bash
+# Create .env from template
+cp env_template.txt .env
+
 # Twilio Configuration
 TWILIO_SID=your_twilio_sid_here
 TWILIO_AUTH_TOKEN=your_twilio_auth_token_here
@@ -45,6 +48,8 @@ TWILIO_PHONE=your_twilio_phone_number_here
 # xAI (Grok) API Configuration
 XAI_API_KEY=your_xai_api_key_here
 ```
+
+The app uses `python-dotenv` to load `.env` automatically on startup.
 
 ### 2. Install Dependencies
 
