@@ -47,7 +47,7 @@ def home():
     <p>📊 <a href="/logs">View Logs</a></p>
     <p>🔧 <a href="/status">System Status</a></p>
     <p>🏥 <a href="/health">Health Check</a></p>
-    <p><strong>📡 Webhook URL:</strong> <code>http://73.225.184.123:5001/</code></p>
+    <p><strong>📡 Webhook URL:</strong> <code>http://your_ip:5001/</code></p>
     """
 
 @app.route('/health')
@@ -343,7 +343,7 @@ if __name__ == '__main__':
     print(f"     -d 'From=+15551234567' \\")
     print(f"     -d 'To={TWILIO_PHONE}'")
     print(f"\n💡 Or test from external network:")
-    print(f"   curl -X POST http://73.225.184.123:5001/ \\")
+    print(f"   curl -X POST http://your_ip:5001/ \\")
     print(f"     -d 'Body=Hello from internet' \\")
     print(f"     -d 'From=+15551234567' \\")
     print(f"     -d 'To={TWILIO_PHONE}'")
