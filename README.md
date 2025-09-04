@@ -86,6 +86,30 @@ The app will run on `http://0.0.0.0:5001` (accessible from your local network)
    ```
    (Twilio requires the webhook at the root path for this setup)
 
+### HTTPS Webhooks with ngrok (development)
+
+Use ngrok to expose your local server over HTTPS for Twilio during development:
+
+```bash
+# Install (macOS)
+brew install ngrok/ngrok/ngrok
+
+# Authenticate once (copy token from your ngrok dashboard)
+ngrok config add-authtoken YOUR_NGROK_TOKEN
+
+# Start HTTPS tunnel to your local app on port 5001
+ngrok http 5001
+```
+
+1. Copy the HTTPS forwarding URL shown by ngrok, for example: `https://abc123.ngrok.io`.
+2. In Twilio Console → Your Number → Messaging → “A message comes in”, set the webhook to:
+   ```
+   https://abc123.ngrok.io/
+   ```
+3. Keep the ngrok process running while you test. Note: free ngrok URLs change on restart; consider a reserved domain on a paid plan.
+
+Tip: Avoid using raw public IPs or private LAN IPs for webhooks; Twilio expects a publicly reachable HTTPS URL.
+
 ## API Endpoints
 
 - `GET /` - Home page with links to logs and status
