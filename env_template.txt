@@ -1,0 +1,11 @@
+# Twilio Configuration
+TWILIO_SID=your_twilio_sid_here
+TWILIO_AUTH_TOKEN=your_twilio_auth_token_here
+TWILIO_PHONE=your_twilio_phone_number_here
+
+# xAI (Grok) API Configuration
+XAI_API_KEY=your_xai_api_key_here
+
+# Flask Configuration (optional)
+FLASK_ENV=development
+FLASK_DEBUG=True
