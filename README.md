@@ -1,5 +1,6 @@
 # SMS Bridge with Grok AI
 Designed to provide Grok Chat for Starlink Direct to Cell service (T-Mobile, September 2025)
+Related: [X post by anemll](https://x.com/anemll/status/1963318984331465018)
 
 A Flask application that bridges SMS messages with xAI's Grok model using Twilio, enabling AI-powered conversations via satellite SMS connectivity.
 
