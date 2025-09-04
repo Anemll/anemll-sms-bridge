@@ -324,10 +324,7 @@ def handle_sms_webhook():
     resp = MessagingResponse()
     return str(resp)
 
-@app.route('/sms', methods=['POST'])
-def sms_webhook():
-    """Legacy endpoint - redirects to root"""
-    return handle_sms_webhook()
+# Removed legacy '/sms' endpoint; Twilio should post to root '/'
 
 if __name__ == '__main__':
     print(f"\n{'='*60}")
